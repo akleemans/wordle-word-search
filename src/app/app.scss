@@ -1,0 +1,23 @@
+.single-letter {
+  width: 50px;
+}
+
+.top-bar {
+  display: flex;
+}
+
+.space {
+  margin-right: 10px;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 20px;
+
+  .single-word {
+    margin: 5px;
+  }
+}
+

@@ -1,0 +1,63 @@
+<h1>Wordle / Lingo word search</h1>
+
+<p>
+  Search for 5 letter words
+</p>
+
+<div>
+  Choose word list:
+  <mat-form-field appearance="outline">
+    <mat-label>Word list</mat-label>
+    <mat-select [(ngModel)]="selectedWordlist">
+      <mat-option value="wordle">Wordle</mat-option>
+      <mat-option value="wordle-gb">Wordle for GameBoy</mat-option>
+      <mat-option value="wordyl-gb">Wordyl for GameBoy</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<section class="top-bar">
+  <div class="space">
+    Matching:
+    <mat-form-field appearance="outline" class="single-letter">
+      <input matInput type="text" [(ngModel)]="l1">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="single-letter">
+      <input matInput type="text" [(ngModel)]="l2">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="single-letter">
+      <input matInput type="text" [(ngModel)]="l3">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="single-letter">
+      <input matInput type="text" [(ngModel)]="l4">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="single-letter">
+      <input matInput type="text" [(ngModel)]="l5">
+    </mat-form-field>
+  </div>
+
+  <div class="space">
+    Correct:
+    <mat-form-field appearance="outline">
+      <input matInput type="text" [(ngModel)]="matching">
+    </mat-form-field>
+  </div>
+
+  <div class="space">
+    Incorrect:
+    <mat-form-field appearance="outline">
+      <input matInput type="text" [(ngModel)]="notMatching">
+    </mat-form-field>
+  </div>
+
+  <button matButton="elevated" (click)="reset()">Reset</button>
+</section>
+
+<section>
+  <p>{{ results().length }} results</p>
+  <div class="results">
+    @for (word of results(); track word) {
+      <div class="single-word">{{ word | uppercase }}</div>
+    }
+  </div>
+</section>
