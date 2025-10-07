@@ -31,7 +31,7 @@ export class App {
   protected matching = signal('');
   protected notMatching = signal('');
 
-  protected selectedWordlist = signal('wordle-gb');
+  protected selectedWordlist = signal('wordle');
 
   protected allWords = computed(() => this.getWordList(this.selectedWordlist()));
   protected results = computed(() => this.filterWords(this.allWords(), {
