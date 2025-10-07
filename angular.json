@@ -17,6 +17,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "docs",
+            "baseHref": "/wordle-word-search/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
