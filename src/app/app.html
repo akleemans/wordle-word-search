@@ -6,12 +6,13 @@
 
 <div>
   Choose word list:
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" style="width: 350px">
     <mat-label>Word list</mat-label>
     <mat-select [(ngModel)]="selectedWordlist">
-      <mat-option value="wordle">Wordle</mat-option>
-      <mat-option value="wordle-gb">Wordle for GameBoy</mat-option>
-      <mat-option value="wordyl-gb">Wordyl for GameBoy</mat-option>
+      <mat-option value="wordle">Wordle (2331 words)</mat-option>
+      <mat-option value="wordle-gb">Wordle for GameBoy (212 words)</mat-option>
+      <mat-option value="wordyl-gb">Wordyl for GameBoy (2294 words)</mat-option>
+      <mat-option value="common-en">Common English (3103 words)</mat-option>
     </mat-select>
   </mat-form-field>
 </div>

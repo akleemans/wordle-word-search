@@ -7,6 +7,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButton} from '@angular/material/button';
 import {WORDYL_GB_LIST} from './wordyl-gb';
 import {WORDLE_LIST} from './wordle';
+import {COMMON_EN_LIST} from './common-en';
 
 interface Letters {
   l1: string;
@@ -81,6 +82,7 @@ export class App {
       'wordle': WORDLE_LIST,
       'wordle-gb': WORDLE_GB_LIST,
       'wordyl-gb': WORDYL_GB_LIST,
+      'common-en': COMMON_EN_LIST,
     }[name]!;
   }
 
